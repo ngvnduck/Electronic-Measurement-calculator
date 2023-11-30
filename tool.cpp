@@ -100,6 +100,7 @@ void check(vector<PhepDo> &list) {
 	}
 }
 int main() {
+	// cout << fixed;
 	vector<PhepDo> list;
 	PhepDo x;
 	cout << "Nhap so phep do: ";
