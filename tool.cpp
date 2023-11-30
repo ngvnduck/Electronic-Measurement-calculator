@@ -93,7 +93,8 @@ void check(vector<PhepDo> &list) {
 		if (error == false) {
 			cout << "\033[32mCac phep do deu dung.\033[0m" << endl;
 			cout << "Sai so trung binh binh phuong: " << saisoTBbinhphuong(list) << endl;
-			cout << "\033[32m" << "Ket qua phep do: X = " << k << " +- " << 3*saisoTBbinhphuong(list) << "\033[0m" << endl;
+			cout << "Sai so trung binh binh phuong cua cac aTB: " << saisoTBbinhphuong(list)/sqrt(list.size()) << endl;
+			cout << "\033[32m" << "Ket qua phep do: X = " << phepdotrungbinh(list) << " +- " << 3*saisoTBbinhphuong(list)/sqrt(list.size()) << "\033[0m" << endl;
 			return;
 		}
 	}
