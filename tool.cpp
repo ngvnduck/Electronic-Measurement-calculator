@@ -26,6 +26,7 @@ void showList(const vector<PhepDo> &list) {
 		cout << "Empty list!" << endl;
 		return;
 	}
+	cout << setfill('-') << setw(62) << "-" << endl;
 	cout << setfill(' ');
 	cout << setw(2) << left << "" << "| ";
 	cout <<"\033[31m"<< setw(20) << left << "Ket qua do";
@@ -78,7 +79,7 @@ void check(vector<PhepDo> &list) {
 		cout << "Trung binh phep do: " << phepdotrungbinh(list) << endl << "Sai so trung binh: " << saisotrungbinh(list) << endl;
 		for (int i=0; i<list.size();i++) {
 			if(list[i].ss>(6*k)) {
-				cout << "Phep do so " << i+1 << " bi sai" << endl;
+				cout << "\033[33mPhep do so " << i+1 << " bi sai\033[0m" << endl;
 				list[i].ccc=false;
 				error = true;
 			}
@@ -90,8 +91,9 @@ void check(vector<PhepDo> &list) {
 			}
 		}
 		if (error == false) {
-			cout << "Cac phep do deu dung." << endl;
+			cout << "\033[32mCac phep do deu dung.\033[0m" << endl;
 			cout << "Sai so trung binh binh phuong: " << saisoTBbinhphuong(list) << endl;
+			cout << "\033[32m" << "Ket qua phep do: X = " << k << " +- " << saisoTBbinhphuong(list) << "\033[0m" << endl;
 			return;
 		}
 	}
