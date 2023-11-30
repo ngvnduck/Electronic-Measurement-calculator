@@ -1,2 +1,6 @@
-# tool-for-Electronic-Measurement
-Electronic Measurement class semester 2023.1
+# Objective
+Calculating Measurement Results and Measurement Uncertainty of a measurement.
+# Instruction
+- Step 1: Input number of measures.<br>
+- Step 2: Input measured values.<br>
+The tool will delete incorrect values and output Measurement Results and Measurement Uncertainty.
